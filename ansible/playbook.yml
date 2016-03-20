@@ -9,6 +9,5 @@
     - apache
     - mysql
     - php
-    - xdebug
     - composer
     - app

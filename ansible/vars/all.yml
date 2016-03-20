@@ -6,11 +6,11 @@ server:
     locale: en_US.UTF-8
 vagrant_local:
     install: '1'
-    vm: { base_box: trusty64, hostname: cakebake.dev, ip: 192.168.33.99, memory: '512', sharedfolder: ./htdocs, useVagrantCloud: '1', syncType: '0' }
+    vm: { base_box: trusty64, hostname: cakebake-php54.dev, ip: 192.168.33.54, memory: '512', sharedfolder: ./htdocs, useVagrantCloud: '1', syncType: '0' }
 apache:
     install: '1'
     docroot: /var/www/html
-    servername: cakebake.dev
+    servername: cakebake-php54.dev
 mysql:
     install: '1'
     root_password: root
@@ -20,9 +20,8 @@ mysql:
     dump: ''
 php:
     install: '1'
-    ppa: php5
-    packages: [php5-cli, php5-intl, php5-mcrypt, php5-curl, php5-gd, php5-mysql, php5-sqlite, php5-xmlrpc, php5-imagick]
-xdebug:
-    install: '1'
+    ppa: php5-oldstable
+    packages: [php-pear, php5-dev, php5-cli, php5-intl, php5-mcrypt, php5-curl, php5-gd, php5-mysql, php5-sqlite, php5-xmlrpc, php5-imagick]
+    pecl_packages: [xdebug]
 composer:
     install: '1'

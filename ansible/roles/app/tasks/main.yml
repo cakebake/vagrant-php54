@@ -10,7 +10,7 @@
 
 - name: Download Ioncube Loader ...
   sudo: yes
-  shell: curl -SL http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz | tar xzv --directory /usr/lib/php5/20121212 --strip-components=1
+  shell: curl -SL http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz | tar xzv --directory /usr/lib/php5/20100525 --strip-components=1
 
 - name: Enable Ioncube Loader
   sudo: yes

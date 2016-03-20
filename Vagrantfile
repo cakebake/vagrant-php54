@@ -25,7 +25,7 @@ end
 Vagrant.configure("2") do |config|
 
     # project name; change in ansible/vars/all.yml, too
-    project = 'cakebake.dev'
+    project = 'cakebake-php54.dev'
 
     config.vm.provider :virtualbox do |v|
         v.customize ["modifyvm", :id, "--name", project]
@@ -34,10 +34,10 @@ Vagrant.configure("2") do |config|
         v.customize ["modifyvm", :id, "--cpus", 1]
     end
 
-    config.vm.box = "ubuntu/trusty64"
+    config.vm.box = "hashicorp/precise64"
     config.vm.hostname = project
     config.vm.network "forwarded_port", guest: 80, host: 8080
-    config.vm.network :private_network, ip: "192.168.33.99"
+    config.vm.network :private_network, ip: "192.168.33.54"
     config.ssh.forward_agent = true
     config.vm.synced_folder "./htdocs", "/var/www/html", owner: 'www-data', group: 'www-data', mount_options: ["dmode=777", "fmode=777"]
 

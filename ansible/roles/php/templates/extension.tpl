@@ -1,2 +1,2 @@
 ; Configuration for php PECL {{ item }} extension
-extension={{ item }}.so
+zend_extension=/usr/lib/php5/20100525/{{ item }}.so
